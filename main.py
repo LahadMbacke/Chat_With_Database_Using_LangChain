@@ -41,8 +41,30 @@ chain = (
     | model
     | StrOutputParser()
 )
+
+
+# 1 This step is to translate the result's query in langauge natural
+template_final = """
+ Base sur cette table et la requte pour donner les resultats :
+ {table}
+
+ Question: :{question}
+ Reponse: {reponse}
+"""
+prompt_final = ChatPromptTemplate.from_template(template_final)
+
+def get_response(query):
+    return db.run(query)
+
+nlp_chain = (
+     RunnablePassthrough.assign(query=chain).assign(table=get_table, reponse= lambda var : get_response(var["query"]))
+     | prompt_final
+     |model
+     | StrOutputParser()
+)
+
+
 query = "Donne moi le nombre de client ?'"
-print(chain.invoke({"question":query}))
-
-
+resultats = nlp_chain.invoke({"question":query})
+print(resultats)
 
