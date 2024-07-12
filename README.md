@@ -25,19 +25,19 @@ Ce projet intègre divers composants pour traiter des requêtes en langage natur
 ## Variables d'Environnement
 
 Créez un fichier .env dans le répertoire racine du projet et ajoutez les variables suivantes :
-    OPENAI_API_KEY=<votre_clé_api_openai>
-    host=<hôte_de_la_base_de_données>
-    port=<port_de_la_base_de_données>
-    dbname=<nom_de_la_base_de_données>
-    username=<nom_d'utilisateur_de_la_base_de_données>
-    password=<mot_de_passe_de_la_base_de_données>
+- OPENAI_API_KEY=<votre_clé_api_openai>
+- host=<hôte_de_la_base_de_données>
+- port=<port_de_la_base_de_données>
+- dbname=<nom_de_la_base_de_données>
+- username=<nom_d'utilisateur_de_la_base_de_données>
+- password=<mot_de_passe_de_la_base_de_données>
 
 ## Architecture
 Le projet est structuré autour d'une série d'étapes qui :
 
-1 - Récupération de la Requête SQL : Convertit une question en langage naturel en une requête SQL à l'aide de l'API OpenAI.
-2 - Exécution de la Requête : Exécute la requête SQL sur la base de données PostgreSQL et récupère les résultats.
-3 -Traduction des Résultats : Convertit les résultats de la requête SQL en langage naturel pour présentation à l'utilisateur.
+- Récupération de la Requête SQL : Convertit une question en langage naturel en une requête SQL à l'aide de l'API OpenAI.
+- Exécution de la Requête : Exécute la requête SQL sur la base de données PostgreSQL et récupère les résultats.
+- Traduction des Résultats : Convertit les résultats de la requête SQL en langage naturel pour présentation à l'utilisateur.
 
 ## Contribution
 Les contributions sont les bienvenues ! Veuillez forker le dépôt et soumettre une pull request avec vos modifications proposées.
