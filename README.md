@@ -25,12 +25,12 @@ Ce projet intègre divers composants pour traiter des requêtes en langage natur
 ## Variables d'Environnement
 
 Créez un fichier .env dans le répertoire racine du projet et ajoutez les variables suivantes :
-- OPENAI_API_KEY=<votre_clé_api_openai>
-- host=<hôte_de_la_base_de_données>
-- port=<port_de_la_base_de_données>
-- dbname=<nom_de_la_base_de_données>
-- username=<nom_d'utilisateur_de_la_base_de_données>
-- password=<mot_de_passe_de_la_base_de_données>
+- OPENAI_API_KEY= `<votre_clé_api_openai>`
+- host= `<hôte_de_la_base_de_données>`
+- port= `<port_de_la_base_de_données>`
+- dbname= `<nom_de_la_base_de_données>`
+- username= `<nom_d'utilisateur_de_la_base_de_données>`
+- password= `<mot_de_passe_de_la_base_de_données>`
 
 ## Architecture
 Le projet est structuré autour d'une série d'étapes qui :
