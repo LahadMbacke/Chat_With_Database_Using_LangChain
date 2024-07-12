@@ -24,3 +24,8 @@ uri_pg = f"postgresql+psycopg2://{username}:{password}@{host}:{port}/{dbname}"
 
 
 db = SQLDatabase.from_uri(uri_pg)
+
+def get_table(db):
+    return db.get_table_info()
+
+
